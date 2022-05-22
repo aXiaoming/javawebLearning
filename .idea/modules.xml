@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-test/01-test.iml" filepath="$PROJECT_DIR$/01-test/01-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro01-jdbc/pro01-jdbc.iml" filepath="$PROJECT_DIR$/pro01-jdbc/pro01-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro02-fruit1.0-jdbc/pro02-fruit1.0-jdbc.iml" filepath="$PROJECT_DIR$/pro02-fruit1.0-jdbc/pro02-fruit1.0-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro03-fruit1.1-jdbc/pro03-fruit1.1-jdbc.iml" filepath="$PROJECT_DIR$/pro03-fruit1.1-jdbc/pro03-fruit1.1-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro04-fruit1.2-jdbc/pro04-fruit1.2-jdbc.iml" filepath="$PROJECT_DIR$/pro04-fruit1.2-jdbc/pro04-fruit1.2-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro05-fruit1.3-jdbc/pro05-fruit1.3-jdbc.iml" filepath="$PROJECT_DIR$/pro05-fruit1.3-jdbc/pro05-fruit1.3-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro06-jdbc-batch-datasource/pro06-jdbc-batch-datasource.iml" filepath="$PROJECT_DIR$/pro06-jdbc-batch-datasource/pro06-jdbc-batch-datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sgg-web2021.iml" filepath="$PROJECT_DIR$/sgg-web2021.iml" />
+    </modules>
+  </component>
+</project>

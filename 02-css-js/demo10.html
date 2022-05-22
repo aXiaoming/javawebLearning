@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<!--嵌入式-->
+<script>
+    //单行注释
+    /*
+     * 多行注释
+     * */
+    alert('js hello world!');//弹窗
+</script>
+
+
+<!--外链式-->
+<!--注意：如果script标签外部引入js文件，
+    那么此标签当中就不能再写js程序-->
+<script src="../test.js"></script>
+
+
+<!--行间式-->
+<div onclick="alert('yea...行间样式生效了')"></div>
+<a href="javascript:alert('我是a');">点我</a>
+<a href="javascript:void(0)" onclick="alert('我也是a');">再来点我啊</a>
+</body>
+</html>
