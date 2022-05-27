@@ -13,7 +13,7 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>Demo03Servlet</servlet-name>
+        <servlet-name>D03Session</servlet-name>
         <servlet-class>com.atguigu.servlets.Demo03Servlet</servlet-class>
     </servlet>
     <servlet>
@@ -49,7 +49,7 @@
         <url-pattern>/demo04</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Demo03Servlet</servlet-name>
+        <servlet-name>D03Session</servlet-name>
         <url-pattern>/demo03</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

@@ -19,7 +19,7 @@ public class AddServlet extends HttpServlet {
         //get方式目前不需要设置编码（基于tomcat8）
         //如果是get请求发送的中文数据，转码稍微有点麻烦（tomcat8之前）
         String fname = request.getParameter("fname");
-        //1.将字符串打散成字节数组
+        //1.将字符串打散成字节数组 因为tomcat底层默认编码是iso-8859-1，所以取到的值也是以这种方式编码的
         byte[] bytes = fname.getBytes("ISO-8859-1");
         //2.将字节数组按照设定的编码重新组装成字符串
         fname = new String(bytes,"UTF-8");
