@@ -14,7 +14,7 @@
     </servlet>
     <servlet>
         <servlet-name>D03Session</servlet-name>
-        <servlet-class>com.atguigu.servlets.Demo03Servlet</servlet-class>
+        <servlet-class>com.atguigu.servlets.Demo03Session</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Demo04Servlet</servlet-name>
