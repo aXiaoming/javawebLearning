@@ -6,6 +6,7 @@
     <!-- 配置上下文参数 -->
     <context-param>
         <param-name>view-prefix</param-name>
+        <!-- 这里是指web目录 -->
         <param-value>/</param-value>
     </context-param>
     <context-param>

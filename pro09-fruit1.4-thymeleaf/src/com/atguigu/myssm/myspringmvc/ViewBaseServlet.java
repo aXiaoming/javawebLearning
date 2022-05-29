@@ -56,6 +56,7 @@ public class ViewBaseServlet extends HttpServlet {
 
     }
 
+    // 完成模板的转发与视图的渲染
     protected void processTemplate(String templateName, HttpServletRequest req, HttpServletResponse resp) throws IOException {
         // 1.设置响应体内容类型和字符集
         resp.setContentType("text/html;charset=UTF-8");

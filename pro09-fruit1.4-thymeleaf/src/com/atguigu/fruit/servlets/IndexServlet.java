@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.function.Consumer;
 
 //Servlet从3.0版本开始支持注解方式的注册
 @WebServlet("/index")
@@ -21,6 +22,8 @@ public class IndexServlet extends ViewBaseServlet {
     public void doGet(HttpServletRequest request , HttpServletResponse response)throws IOException, ServletException {
         FruitDAO fruitDAO = new FruitDAOImpl();
         List<Fruit> fruitList = fruitDAO.getFruitList();
+        fruitList.forEach(System.out::println);
+
         //保存到session作用域
         HttpSession session = request.getSession() ;
         session.setAttribute("fruitList",fruitList);
