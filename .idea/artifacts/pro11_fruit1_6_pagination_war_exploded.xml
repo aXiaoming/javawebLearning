@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="pro10-fruit1.5-thymeleaf:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/pro10_fruit1_5_thymeleaf_war_exploded</output-path>
+  <artifact type="exploded-war" name="pro11-fruit1.6-pagination:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pro11_fruit1_6_pagination_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="pro10-fruit1.5-thymeleaf" />
+          <element id="module-output" name="pro11-fruit1.6-pagination" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="lib" />
           <element id="library" level="project" name="lib_thymeleaf" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="pro10-fruit1.5-thymeleaf/web/Web" />
+      <element id="javaee-facet-resources" facet="pro11-fruit1.6-pagination/web/Web" />
     </root>
   </artifact>
 </component>
