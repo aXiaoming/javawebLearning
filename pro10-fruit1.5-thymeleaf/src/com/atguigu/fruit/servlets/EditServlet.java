@@ -12,11 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+// 跳转更新页面
 @WebServlet("/edit.do")
 public class EditServlet extends ViewBaseServlet {
-
     private FruitDAO fruitDAO = new FruitDAOImpl();
-
     @Override
     public void doGet(HttpServletRequest request , HttpServletResponse response)throws IOException, ServletException {
         String fidStr = request.getParameter("fid");
