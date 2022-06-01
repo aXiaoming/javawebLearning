@@ -15,6 +15,8 @@
       <module fileurl="file://$PROJECT_DIR$/pro10-fruit1.5-thymeleaf/pro10-fruit1.5-thymeleaf.iml" filepath="$PROJECT_DIR$/pro10-fruit1.5-thymeleaf/pro10-fruit1.5-thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro11-fruit1.6-pagination/pro11-fruit1.6-pagination.iml" filepath="$PROJECT_DIR$/pro11-fruit1.6-pagination/pro11-fruit1.6-pagination.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro12-fruit1.7-keyword/pro12-fruit1.7-keyword.iml" filepath="$PROJECT_DIR$/pro12-fruit1.7-keyword/pro12-fruit1.7-keyword.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro13-fruit1.8-mvc/pro13-fruit1.8-mvc.iml" filepath="$PROJECT_DIR$/pro13-fruit1.8-mvc/pro13-fruit1.8-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro14-fruit1.9-mvc-reflect/pro14-fruit1.9-mvc-reflect.iml" filepath="$PROJECT_DIR$/pro14-fruit1.9-mvc-reflect/pro14-fruit1.9-mvc-reflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/sgg-web2021.iml" filepath="$PROJECT_DIR$/sgg-web2021.iml" />
     </modules>
   </component>
