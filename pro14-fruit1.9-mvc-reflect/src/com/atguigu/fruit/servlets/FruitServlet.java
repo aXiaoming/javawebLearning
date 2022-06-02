@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.List;
 
 @WebServlet("/fruit.do")
@@ -28,25 +30,27 @@ public class FruitServlet extends ViewBaseServlet {
             operate = "index" ;
         }
 
-        switch(operate){
-            case "index":
-                index(request,response);
-                break;
-            case "add":
-                add(request,response);
-                break;
-            case "del":
-                del(request,response);
-                break;
-            case "edit":
-                edit(request,response);
-                break;
-            case "update":
-                update(request,response);
-                break;
-            default:
-                throw new RuntimeException("operate值非法!");
+        // 获得该类中所有的方法
+        Method[] methods = this.getClass().getDeclaredMethods();
+        for (Method method : methods) {
+            // 获取方法名称
+            String methodName = method.getName();
+            // 遍历类中所有的方法，拿到方法后与获取的operate比较，如果一样，则调用该方法处理
+            if (methodName.equals(operate)){
+                try {
+                    // 使用当前对象调用该方法 参数:(调用的对象,方法参数1,方法参数2)
+                    method.invoke(this,request,response);
+                    // 这里用return而不是break,用break跳出后,仍会执行下面的抛出异常,而用return直接结束当前方法
+                    return;
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+        throw new RuntimeException("operate值非法!");
+
     }
 
     private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
