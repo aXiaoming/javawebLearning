@@ -17,45 +17,48 @@ import java.util.Map;
 
 public class ClassPathXmlApplicationContext implements BeanFactory {
 
-    private Map<String,Object> beanMap = new HashMap<>();
+    private Map<String, Object> beanMap = new HashMap<>();
 
-    public ClassPathXmlApplicationContext(){
+    public ClassPathXmlApplicationContext() {
         try {
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream("applicationContext.xml");
             //1.创建DocumentBuilderFactory
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             //2.创建DocumentBuilder对象
-            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder() ;
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             //3.创建Document对象
             Document document = documentBuilder.parse(inputStream);
 
             //4.获取所有的bean节点
             NodeList beanNodeList = document.getElementsByTagName("bean");
-            for(int i = 0 ; i<beanNodeList.getLength() ; i++){
+            for (int i = 0; i < beanNodeList.getLength(); i++) {
                 Node beanNode = beanNodeList.item(i);
-                if(beanNode.getNodeType() == Node.ELEMENT_NODE){
-                    Element beanElement = (Element)beanNode ;
-                    String beanId =  beanElement.getAttribute("id");
+                if (beanNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element beanElement = (Element) beanNode;
+                    String beanId = beanElement.getAttribute("id");
                     String className = beanElement.getAttribute("class");
                     Class beanClass = Class.forName(className);
                     //创建bean实例
-                    Object beanObj = beanClass.newInstance() ;
+                    Object beanObj = beanClass.newInstance();
                     //将bean实例对象保存到map容器中
-                    beanMap.put(beanId , beanObj) ;
+                    beanMap.put(beanId, beanObj);
                     //到目前为止，此处需要注意的是，bean和bean之间的依赖关系还没有设置
                 }
             }
             //5.组装bean之间的依赖关系
-            for(int i = 0 ; i<beanNodeList.getLength() ; i++){
+            for (int i = 0; i < beanNodeList.getLength(); i++) {
                 Node beanNode = beanNodeList.item(i);
-                if(beanNode.getNodeType() == Node.ELEMENT_NODE) {
+                if (beanNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element beanElement = (Element) beanNode;
                     String beanId = beanElement.getAttribute("id");
+                    // 获取该节点下的所有子节点
                     NodeList beanChildNodeList = beanElement.getChildNodes();
-                    for (int j = 0; j < beanChildNodeList.getLength() ; j++) {
+                    for (int j = 0; j < beanChildNodeList.getLength(); j++) {
                         Node beanChildNode = beanChildNodeList.item(j);
-                        if(beanChildNode.getNodeType()==Node.ELEMENT_NODE && "property".equals(beanChildNode.getNodeName())){
+                        // 子节点如果是元素节点，并且是property标签
+                        if (beanChildNode.getNodeType() == Node.ELEMENT_NODE && "property".equals(beanChildNode.getNodeName())) {
                             Element propertyElement = (Element) beanChildNode;
+                            // 获取对应的属性名、依赖的对象名
                             String propertyName = propertyElement.getAttribute("name");
                             String propertyRef = propertyElement.getAttribute("ref");
                             //1) 找到propertyRef对应的实例
@@ -65,7 +68,7 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
                             Class beanClazz = beanObj.getClass();
                             Field propertyField = beanClazz.getDeclaredField(propertyName);
                             propertyField.setAccessible(true);
-                            propertyField.set(beanObj,refObj);
+                            propertyField.set(beanObj, refObj);
                         }
                     }
                 }
