@@ -35,7 +35,7 @@ public class ConnUtil {
         }
         return threadLocal.get() ;
     }
-
+    // 把conn对象关闭并从threadlocal中移除
     public static void closeConn() throws SQLException {
         Connection conn = threadLocal.get();
         if(conn==null){

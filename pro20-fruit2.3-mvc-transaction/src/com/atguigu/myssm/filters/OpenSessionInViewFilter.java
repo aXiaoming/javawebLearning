@@ -10,8 +10,7 @@ import java.sql.SQLException;
 @WebFilter("*.do")
 public class OpenSessionInViewFilter implements Filter {
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-
+    public void init(FilterConfig filterConfig) {
     }
 
     @Override
@@ -35,6 +34,5 @@ public class OpenSessionInViewFilter implements Filter {
 
     @Override
     public void destroy() {
-
     }
 }
