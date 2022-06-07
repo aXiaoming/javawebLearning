@@ -88,8 +88,8 @@ public abstract class BaseDAO<T> {
 
             //获取当前字段的类型名称
             String typeName = field.getType().getName();
-            //判断如果是自定义类型，则需要调用这个自定义类的带一个参数的构造方法，创建出这个自定义的实例对象，然后将实例对象赋值给这个属性
 
+            //判断如果是自定义类型，则需要调用这个自定义类的带一个参数的构造方法，创建出这个自定义的实例对象，然后将实例对象赋值给这个属性
             if(isMyType(typeName)){
                 //假设typeName是"com.atguigu.qqzone.pojo.UserBasic"
                 Class typeNameClass = Class.forName(typeName);
