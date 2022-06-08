@@ -21,7 +21,9 @@
             <tr th:if="${#lists.isEmpty(session.userBasic.topicList)}">
                 <td>暂无日志列表</td>
             </tr>
-            <tr th:unless="${#lists.isEmpty(session.userBasic.topicList)}" th:each="topic : ${session.userBasic.topicList}">
+            <tr th:unless="${#lists.isEmpty(session.userBasic.topicList)}"
+                th:each="topic : ${session.userBasic.topicList}">
+
                 <td th:text="${topic.id}">2</td>
                 <td class="left"><a href="detail.html" th:text="${topic.title}">我乔峰要走，你们谁可阻拦</a></td>
                 <td th:text="${topic.topicDate}">2021-09-01 12:30:55</td>
