@@ -97,6 +97,7 @@ public abstract class BaseDAO<T> {
                 propertyValue = constructor.newInstance(propertyValue);
             }
             field.setAccessible(true);
+            // set(给哪个对象，设置的啥属性值)
             field.set(obj,propertyValue);
         }
     }
@@ -176,7 +177,7 @@ public abstract class BaseDAO<T> {
         return null ;
     }
 
-    //执行查询，返回List
+    // 执行查询，返回 List
     protected List<T> executeQuery(String sql , Object... params){
         List<T> list = new ArrayList<>();
         conn = getConn() ;

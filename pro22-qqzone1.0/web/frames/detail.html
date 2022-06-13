@@ -37,6 +37,7 @@
                 <tr>
                     <td rowspan="2" class="w14 h96">
                         <div class="h64 center " style="width:100%;">
+                            <!-- ojnl对象族导航语言 -->
                             <img class="img56 " th:src="@{|/imgs/${session.topic.author.headImg}|}"/>
                         </div>
                         <div class="h32 center" style="width:100%;" th:text="${session.topic.author.nickName}">乔峰</div>
@@ -48,7 +49,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td th:text="${session.topic.content}">杀母大仇, 岂可当作买卖交易？此仇能报便报, 如不能报, 则我父子毕命于此便了。这等肮脏之事, 岂是我萧氏父子所屑为？</td>
+                    <td th:text="${session.topic.content}">
+                        杀母大仇, 岂可当作买卖交易？此仇能报便报, 如不能报, 则我父子毕命于此便了。这等肮脏之事, 岂是我萧氏父子所屑为？</td>
                 </tr>
             </table>
         </div>
@@ -61,7 +63,8 @@
                         </div>
                         <div class="h32 center" style="width:100%;" th:text="${reply.author.nickName}">段誉</div>
                     </td>
-                    <td class="reply_title" th:onmouseover="|showDelImg('img${reply.id}')|" th:onmouseout="|hiddenDelImg('img${reply.id}')|">
+                    <td class="reply_title" th:onmouseover="|showDelImg('img${reply.id}')|"
+                        th:onmouseout="|hiddenDelImg('img${reply.id}')|">
                         <span th:text="|回复：${session.topic.title}|">萧某今天就和天下群雄决一死战，你们一起上吧！</span>
                         <!--
                             出现删除这个小图标的条件：
