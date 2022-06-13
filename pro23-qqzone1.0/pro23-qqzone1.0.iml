@@ -22,6 +22,5 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="lib_thymeleaf" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.42" level="application_server_libraries" />
-    <orderEntry type="library" name="lib_myssm" level="project" />
   </component>
 </module>
