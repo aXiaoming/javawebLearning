@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -23,6 +24,6 @@
     <orderEntry type="library" name="lib_myssm" level="project" />
     <orderEntry type="library" name="lib_thymeleaf" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.42" level="application_server_libraries" />
-    <orderEntry type="library" name="lib-kaptcha" level="project" />
+    <orderEntry type="library" name="lib_kaptcha" level="project" />
   </component>
 </module>

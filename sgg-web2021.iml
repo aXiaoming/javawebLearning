@@ -11,5 +11,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="lib_thymeleaf" level="project" />
     <orderEntry type="library" name="lib_myssm" level="project" />
+    <orderEntry type="library" name="lib_kaptcha" level="project" />
   </component>
 </module>

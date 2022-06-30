@@ -3,6 +3,9 @@ package com.atguigu.book.pojo;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * 购物车类，数据库中不存在该表
+ */
 public class Cart {
     private Map<Integer,CartItem> cartItemMap ;     //购物车中购物车项的集合 , 这个Map集合中的key是Book的id
     private Double totalMoney ;                     //购物车的总金额

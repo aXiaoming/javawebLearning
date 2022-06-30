@@ -15,11 +15,11 @@
     <bean id="page" class="com.atguigu.myssm.myspringmvc.PageController"/>
 
     <!-- DAO -->
-    <bean id="userDAO" class="com.atguigu.book.dao.impl.UserDAOImpl"/>
-    <bean id="bookDAO" class="com.atguigu.book.dao.impl.BookDAOImpl"/>
-    <bean id="cartItemDAO" class="com.atguigu.book.dao.impl.CartItemDAOImpl"/>
-    <bean id="orderDAO" class="com.atguigu.book.dao.impl.OrderDAOImpl"/>
-    <bean id="orderItemDAO" class="com.atguigu.book.dao.impl.OrderItemDAOImpl"/>
+    <bean id="userDAO" class="com.atguigu.book.service.impl.impl.UserDAOImpl"/>
+    <bean id="bookDAO" class="com.atguigu.book.service.impl.impl.BookDAOImpl"/>
+    <bean id="cartItemDAO" class="com.atguigu.book.service.impl.impl.CartItemDAOImpl"/>
+    <bean id="orderDAO" class="com.atguigu.book.service.impl.impl.OrderDAOImpl"/>
+    <bean id="orderItemDAO" class="com.atguigu.book.service.impl.impl.OrderItemDAOImpl"/>
 
     <!-- service -->
     <bean id="userService" class="com.atguigu.book.service.impl.UserServiceImpl">

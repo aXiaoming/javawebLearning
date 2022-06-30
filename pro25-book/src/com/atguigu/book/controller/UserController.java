@@ -16,7 +16,6 @@ public class UserController {
     private CartItemService cartItemService ;
 
     public String login(String uname , String pwd , HttpSession session){
-
         User user = userService.login(uname, pwd);
         if(user!=null){
             Cart cart = cartItemService.getCart(user);
