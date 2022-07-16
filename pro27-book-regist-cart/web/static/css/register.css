@@ -45,7 +45,7 @@
 .login_banner .register_form form .form-item .errMess {
   font-size: 12px;
   color: red;
-  visibility: hidden;
+  visibility:  hidden;
   margin: 2px 0;
 }
 .login_banner .register_form form .form-item:nth-last-child(2) .verify {
